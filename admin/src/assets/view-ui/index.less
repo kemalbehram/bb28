@@ -1,0 +1,111 @@
+@import '~view-design/src/styles/index.less';
+
+@color-black :#20222A;
+@color-sub: #666869;
+@color-desc: #999b9c;
+@text-color : #444547;
+@menu-dark-title:@color-black;
+@menu-dark-active-bg: rgba(0,0,0,.3);
+@layout-sider-background:@color-black;
+@primary-color: #269D90;
+@font-size-base : 14px;
+@font-size-small : 14px;
+@font-size-large : 16px;
+@border-color-base : #eaeced;
+@border-color-split : #eeeff1;
+@border-radius-base : 2px;
+@border-radius-small : 2px;
+@btn-border-radius : 2px;
+@btn-border-radius-small: 2px;
+@link-color : #009688;
+@link-hover-color : tint(@link-color, 20%);
+@link-active-color : shade(@link-color, 5%);
+@selected-color : fade(@primary-color, 90%);
+@input-color : @color-black;
+@table-thead-bg: #f8fafb;
+@table-td-stripe-bg: #f8fafb;
+
+
+@import './tags-nav.less';
+@import './ivu-table.less';
+@import './ivu-select.less';
+
+.table-pointer {height: 40px;line-height: 40px;cursor: pointer;}
+
+body{min-width:1180px}
+h1,h2,h3,h4,h5,h6,hr,td,th{font-weight:400}
+.ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu .ivu-menu-item-active,.ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu .ivu-menu-item-active:hover{background:@primary-color !important}
+.ivu-menu-dark.ivu-menu-vertical .ivu-menu-opened{background:rgba(0,0,0,.12)}
+.ivu-menu-vertical .ivu-menu-item{padding:12px 24px!important}
+.ivu-menu{padding:8px 0!important}
+.ivu-card-body{position:relative}
+.ivu-modal-body{position:relative}
+
+
+.main .content-wrapper{padding:15px}
+.main .logo-con{box-shadow:0 1px 2px 0 rgba(0,0,0,.15);position:absolute;z-index:999;width:100%;background:#20222a}
+.side-menu-wrapper{padding-top:64px} 
+.sider-trigger-a i{font-size:20px!important;line-height:28px}
+:root .tags-nav .scroll-outer{box-shadow:none!important;background:#fff!important;left:39px;right:71px}
+
+
+.main .logo-con img{width:44px;display:inline-block}
+.main .logo-con .name{color:#fff;line-height:44px;font-size:16px;position:absolute;left:68px}
+.side-menu-wrapper a.drop-menu-a{text-align:left!important;padding:12px 22px}
+.ql-container.ql-snow,.ql-toolbar.ql-snow{border-color:@border-color-base!important}
+button:focus,input:focus,select:focus,textarea:focus{outline:0;-webkit-box-shadow:none!important;box-shadow:none!important;}
+input[type="checkbox"] {border:0;box-sizing:unset}
+.ivu-input[disabled], fieldset[disabled] .ivu-input{color:@desc}
+.ivu-card-head{padding:12px 16px}
+.ivu-card-head p,.ivu-card-head-inner{font-weight:400!important;line-height:28px;height:28px;overflow:unset;font-size:16px}
+.ivu-card-extra{font-size:13px}
+.ivu-breadcrumb>span:last-child{font-weight:400!important}
+// .ivu-modal-header{padding:9px 16px}
+.ivu-modal-header-inner{font-weight:400}
+.ivu-modal-close{top:5px}
+// .ivu-drawer-header{padding:9px 16px}
+.ivu-drawer-mask {z-index: 3000;}
+.ivu-drawer-wrap {z-index: 3000;}
+.ivu-drawer-header-inner{font-weight:400}
+.ivu-drawer-close{top:5px}
+.ivu-form-item{margin-bottom:14px}
+.ivu-divider-horizontal{font-weight:400!important;color:@color-sub!important;font-size:13px!important}
+.form-desc-base{color:#666768;vertical-align:baseline;line-height:22px;padding-top:8px}
+.form-desc-middle{color:#666768;vertical-align:middle;line-height:22px;padding-left:10px}
+
+[size=small].ivu-tag{height:18px;line-height:18px;padding:0;text-align:center}
+.form-btn-bottom{position:absolute;bottom:10px;width:calc(100% - 32px)}
+.ivu-btn-small{font-size:12px}
+.ivu-switch:focus{box-shadow: none;}
+
+.ivu-message {z-index: 999999999 !important;}
+// .ivu-avatar {vertical-align: sub;}
+
+.ivu-radio-checked .ivu-radio-inner:after{
+    border-radius: 50% !important;
+}
+
+.ivu-tag{cursor:default;height: 18px;line-height: 16px !important;background: #fff;margin-top: 0px;border-color:#e6e8e9;padding:0 4px}
+.ivu-tag:hover{opacity:1}
+.ivu-tag-volcano {background: #fff;border-color:#fa541c}
+.ivu-tag-red {border-color:#f5222d}
+
+.ivu-checkbox-small {margin-right: 4px;}
+.ivu-checkbox-small .ivu-checkbox-inner {width: 12px; height: 12px;border:0;}
+
+.ivu-notice {
+    margin-right: 16px !important;
+    &-title {
+        font-size: 15px !important;
+        line-height: 18px !important;
+        color:@black !important;
+    }
+
+    &-desc {
+        color:@sub !important
+    }
+}
+
+.ivu-input-group {
+    max-width: -webkit-fill-available;
+}

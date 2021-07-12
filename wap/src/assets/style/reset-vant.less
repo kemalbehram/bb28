@@ -1,0 +1,55 @@
+@import '~vant/lib/index.less';
+
+// @blue: rgba(204, 18, 18, 0.8);
+// * {
+//   box-sizing: border-box;
+//   margin: 0;
+//   padding: 0;
+//   border: 0;
+//   -webkit-tap-highlight-color: transparent;
+// }
+*{
+    box-sizing: border-box;
+}
+
+body {
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+    // overscroll-behavior-y: contain;
+    // padding-top: constant(safe-area-inset-top);
+    // padding-top: env(safe-area-inset-top);
+}
+html {
+    position: relative;
+    margin: 0 auto;
+    max-width: 768px;
+}
+.van-tabbar--fixed {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 768px;
+}
+.van-nav-bar--fixed {
+    max-width: 768px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.van-dropdown-item {
+    max-width: 768px;
+    margin: 0 auto;
+}
+.van-popup--bottom {
+    max-width: 768px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 4px 4px 0 0;
+}
+.van-search {
+    max-width: 768px;
+}
+.max-width {
+    max-width: 768px;
+}

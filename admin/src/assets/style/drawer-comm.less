@@ -1,0 +1,37 @@
+.drawer-common {
+    &-wrap {
+        margin-top: 10px;
+        background: @bg-light;
+        border: 1px solid @line;
+        padding: 10px 14px 8px;
+        position: relative;
+        .status-1 {color:@orange}
+        .status-2 {color:@green}
+        .status-3 {color:@red}
+    }
+
+    &-avatar {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+    }
+
+    &-code {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        span{
+            margin-left: 6px;
+            display: inline-block;
+            // width: 48px;
+            padding: 0 6px;
+            box-shadow: inset 14px -40px 26px -1px @red !important;
+            color: #fff;
+            border-radius: 2px;
+            line-height: 28px;
+            height: 28px;
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+}

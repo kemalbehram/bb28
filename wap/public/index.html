@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+        content="width=device-width,initial-scale=1,user-scalable=no,minimum-scale=0.1,maximum-scale=1,viewport-fit=cover"
+        name="viewport" />
+
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache" content="no-cache" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>
+        <%= process.env.VUE_APP_WEB_TITLE_DEFAULT %>
+    </title>
+</head>
+
+<body>
+    <noscript>
+        <strong>We're sorry but vue-vant-default doesn't work properly without
+            JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <!-- <script src="//at.alicdn.com/t/font_1444638_yna4sfzwj8.js"></script> -->
+    <!-- 银行 -->
+    <!-- <script src="//at.alicdn.com/t/font_1543813_rc2q2g73zhn.js"></script> -->
+</body>
+<style>
+    /* html {
+            overflow: auto;
+        } */
+</style>
+<script>
+    ; /禁止ios缩放，双击和双指/
+    window.onload = function () {
+        document.addEventListener('touchstart', function (event) {
+            if (event.touches.length > 1) {
+                event.preventDefault()
+            }
+        })
+        var lastTouchEnd = 0
+        document.addEventListener(
+            'touchend',
+            function (event) {
+                var now = new Date().getTime()
+                if (now - lastTouchEnd <= 300) {
+                    event.preventDefault()
+                }
+                lastTouchEnd = now
+            },
+            false
+        )
+        document.addEventListener('gesturestart', function (event) {
+            event.preventDefault()
+        })
+    }
+    // 此事件必须提到组件外  不可简写在监听内部
+    const event = (e) => {
+        e.preventDefault();
+    }
+
+    // 禁止滑动调用
+    const unScoll = () => {
+        document.addEventListener('touchmove', event, { passive: false });
+    };
+    // 启动滑动
+    const scoll = () => {
+        document.removeEventListener('touchmove', event, false);
+    };
+
+</script>
+
+</html>
+<style>
+    /* body {
+        height: 100vh !important;
+    } */
+
+    /* body {
+        overflow: auto !important;
+    }
+
+    .van-overflow-hidden {
+        overflow: auto !important;
+    } */
+</style>

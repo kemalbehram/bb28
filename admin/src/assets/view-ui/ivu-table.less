@@ -1,0 +1,58 @@
+// table
+.ivu-table-body {
+    position: relative;
+}
+.ivu-table:before {
+    display: none;
+}
+.ivu-table-border th,
+.ivu-table-border td {
+    border-right-width: 0;
+}
+.ivu-table-row:last-child td {
+    border-bottom-color: @line;
+}
+.ivu-table-wrapper-with-border {
+    border-bottom: 1px solid @line;
+}
+.ivu-table-wrapper-with-border > .ivu-spin-fix {
+    border-bottom: 0;
+}
+.ivu-table-wrapper-with-border .ivu-table-row:last-child td {
+    border-bottom-width: 0;
+}
+.ivu-table-with-fixed-top .ivu-table-row:last-child td {
+    border-bottom-width: 1px;
+}
+tr.ivu-table-row-hover td {
+    background: @bg-light !important;
+}
+th .ivu-table-cell {
+    font-weight: normal;
+    color: @color-black;
+}
+.ivu-table-cell {
+    padding: 0 12px;
+}
+.ivu-table td {
+    height: 40px;
+    font-size: 14px;
+}
+.ivu-table-small td {
+    height: 35px;
+}
+td.ivu-table-expanded-cell {
+    padding: 8px 50px 8px 67px !important;
+    background-color: #fafbfc;
+}
+.ivu-table-sort {
+    width: 8px;
+    overflow: unset;
+}
+.ivu-table-sort i {
+    height: 7px;
+    font-size: 12px;
+}
+.ivu-table-summary .ivu-table-tbody td {
+    height: 48px;
+}

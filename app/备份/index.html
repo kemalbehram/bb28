@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>南宫28-app下载</title>
+    <script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.js"></script>
+</head>
+
+<body>
+    <span class="down_btn" type="button">立即体验</span>
+</body>
+<style>
+    body {
+        background: url('./images/qidong1.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .down_btn {
+        position: fixed;
+        display: inline-block;
+        width: 100px;
+        padding: 15px 80px;
+        text-align: center;
+        top: 45%;
+        left: 50%;
+        border: unset;
+
+        border-radius: 100px;
+        background: #ffda72;
+        color: #482115;
+        transform: translate(-50%, -50%);
+    }
+</style>
+<script>
+    var browser = {
+        versions: (function () {
+            var u = navigator.userAgent,
+                app = navigator.appVersion
+            return {
+                //移动终端浏览器版本信息
+                trident: u.indexOf('Trident') > -1, //IE内核
+                presto: u.indexOf('Presto') > -1, //opera内核
+                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                android:
+                    u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+                iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+                iPad: u.indexOf('iPad') > -1, //是否iPad
+                webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+            }
+        })(),
+        language: (
+            navigator.browserLanguage || navigator.language
+        ).toLowerCase(),
+    }
+
+    $('.down_btn').on('click', function () {
+        var winRef = window.open('', '_self')
+        if (browser.versions.mobile && browser.versions.ios) {
+            // $('#modal').show()
+            winRef.location = './data/ng28.mobileconfig' //ios包的地址、、
+        } else {
+            winRef.location = './data/app.apk' //android包的地址
+        }
+    })
+</script>
+
+</html>

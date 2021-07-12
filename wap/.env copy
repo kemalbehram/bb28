@@ -1,0 +1,7 @@
+VUE_APP_WEB_TITLE_DEFAULT=英利28-28群玩法，加拿大28，加拿大西部28，台湾28
+VUE_APP_TOKEN_FIELD=__ng_28_token__
+VUE_APP_ASSETS_URL=https://ooo28-build.oss-accelerate.aliyuncs.com/
+VUE_APP_ASSETS_DIR=./ng-assets-wap
+VUE_APP_OUTPUT_DIR=./build
+VUE_APP_API_PROXY=http://ng28:8888
+VUE_APP_TREND_PROXY=http://collect28.localhost.com

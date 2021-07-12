@@ -1,0 +1,86 @@
+#lotto-win-table {
+    margin: 0 auto;
+    position: fixed;
+
+    z-index: 20;
+    top: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    bottom: 0;
+    margin-top: 103px;
+
+    /deep/.van-popup {
+        position: absolute !important;
+        top: 0px;
+    }
+}
+
+.lotto-win-pop {
+    position: relative;
+    // padding: 0 16px 20px 16px;
+
+    color: #2f3242;
+    background: white;
+}
+
+.lotto-win-table {
+    overflow: hidden;
+
+    position: relative;
+}
+
+.lotto-win-table table {
+    margin-bottom: -1px;
+
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+
+    color: #2f3242;
+    background: white;
+    th {
+        font-weight: normal;
+        height: 26px;
+        font-size: 12px;
+        line-height: 26px;
+        position: relative;
+    }
+    td {
+        font-weight: normal;
+        height: 22px;
+        position: relative;
+    }
+
+    //   th:after,
+    //   td:after {
+    //     position: absolute;
+    //     box-sizing: border-box;
+    //     content: " ";
+    //     pointer-events: none;
+    //     top: -50%;
+    //     right: -50%;
+    //     bottom: -50%;
+    //     left: -50%;
+    //     border-bottom: 1px solid @line-light;
+    //     transform: scale(0.5);
+    //   }
+    //   td:nth-child(1),
+    td:nth-child(4) {
+        color: #68cec4;
+    }
+
+    .win-code-extend {
+        color: #2f3242;
+        // border: 1px solid @line-light;
+
+        // max-width: 54px;
+        font-size: 12px;
+        line-height: 20px;
+        padding: 0 6px;
+        display: inline-block;
+        // font-weight: bold;
+    }
+}
+
